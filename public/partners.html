@@ -5,43 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oblivion • Partners</title>
   <link rel="shortcut icon" type="x-icon" href="Icons/logo.png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{--g1:#0a001a;--g2:#180033;--g3:#00001a;--g4:#1a0033;--acc:#b4a0ff}
-    html,body{height:100%;margin:0;font-family:'Orbitron',sans-serif;background:var(--g1);color:#fff;overflow-x:hidden}
-
-    /* --------  Nebula Background (matches index.html)  -------- */
+    html,body{height:100%}body{margin:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-family:'Orbitron',sans-serif;background:var(--g1);color:#fff;overflow-x:hidden}
+    
+    /* --------  Nebula Background (EXACT match to index.html)  -------- */
     body {
       background: url('imgs/nebula.JPG') no-repeat center center fixed;
       background-size: cover;
       padding-bottom: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 4rem;
-      text-align: center;
     }
-
-    /* --------  Title (matches index.html visibility)  -------- */
+    
+    /* --------  Title (EXACT match to index.html)  -------- */
     .title {
-      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-size: clamp(3rem, 10vw, 5rem);
       letter-spacing: .15em;
       color: #fff;
       text-shadow: 0 0 20px #000, 0 0 40px #000, 0 0 60px #9664ff, 0 0 80px #64ffff;
-      margin: 0;
+      animation: f 3s infinite, p 6s infinite alternate;
     }
-
-    .page-subtitle {
+    
+    @keyframes f{0%,100%{opacity:1}50%{opacity:.8}}
+    @keyframes p{to{transform:scale(1.05)}}
+    
+    .desc {
       color: #fff;
       text-shadow: 0 0 10px #000, 0 0 20px #000;
       font-size: 1.1rem;
-      margin-top: 10px;
+      line-height: 1.6;
     }
-
+    
     /* --------  Partners Grid  -------- */
     .partners-grid {
       margin-top: 3rem;
@@ -53,8 +47,8 @@
     }
 
     .partner-card {
-      background: rgba(0, 0, 0, .7);
-      border: 1px solid rgba(255, 255, 255, .2);
+      background: rgba(0, 0, 0, .6);
+      border: 1px solid rgba(255, 255, 255, .3);
       backdrop-filter: blur(18px);
       border-radius: 12px;
       padding: 2rem;
@@ -64,7 +58,7 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: white;
+      color: #fff;
     }
 
     .partner-card:hover {
@@ -104,8 +98,8 @@
       font-size: 1rem;
       line-height: 1.5;
     }
-
-    /* --------  Bottom Navigation Bar (matches index.html)  -------- */
+    
+    /* --------  Bottom Navigation Bar (EXACT match to index.html)  -------- */
     .bottom-nav {
       position: fixed;
       bottom: 0;
@@ -146,7 +140,7 @@
       text-shadow: 0 0 10px rgba(180, 140, 255, 1);
     }
     
-    /* --------  Panic Button (matches index.html)  -------- */
+    /* --------  Panic Button (EXACT match to index.html)  -------- */
     .panic-btn {
       padding: 8px 24px;
       font-size: 0.95rem;
@@ -170,11 +164,9 @@
 
 <body>
   <h1 class="title">OUR PARTNERS</h1>
-  <p class="page-subtitle">The allies of Oblivion</p>
+  <p class="desc">The allies of Oblivion</p>
 
   <div class="partners-grid">
-
-    <!-- Partner 1 -->
     <a href="put link of proxy/" target="_blank" class="partner-card">
       <img src="public/imgs/IMG" class="partner-logo" alt="Partner Logo">
       <h2 class="partner-name">No partners</h2>
@@ -185,7 +177,7 @@
   <!-- =========  Bottom Navigation Bar  ========= -->
   <nav class="bottom-nav">
     <a href="index.html">Home</a>
-    <a href="public/partners.html" class="active">Partners</a>
+    <a href="partners.html" class="active">Partners</a>
     <a href="games.html">Games</a>
     <a href="apps.html">Apps</a>
     <a href="about.html">About</a>
